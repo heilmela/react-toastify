@@ -20,7 +20,8 @@ export const defaultProps: ToastContainerProps = {
   draggablePercent: Default.DRAGGABLE_PERCENT as number,
   draggableDirection: Direction.X,
   role: 'alert',
-  theme: 'light'
+  theme: 'light',
+  gap: 12,
 };
 
 export function ToastContainer(props: ToastContainerProps) {
@@ -60,7 +61,7 @@ export function ToastContainer(props: ToastContainerProps) {
   useIsomorphicLayoutEffect(() => {
     if (stacked) {
       const nodes = containerRef.current!.querySelectorAll('[data-in="true"]');
-      const gap = 12;
+      const gap = containerProps.gap;
       const isTop = containerProps.position?.includes('top');
       let usedHeight = 0;
       let prevS = 0;

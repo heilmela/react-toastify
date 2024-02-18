@@ -257,6 +257,11 @@ export interface ToastContainerProps extends CommonOptions {
   stacked?: boolean;
 
   /**
+   * Control the gap of stacked toasts
+   */
+   gap?: number;
+
+  /**
    * Whether or not to display the newest toast on top.
    * `Default: false`
    */
@@ -281,6 +286,8 @@ export interface ToastContainerProps extends CommonOptions {
    * Limit the number of toast displayed at the same time
    */
   limit?: number;
+
+ 
 }
 
 export interface ToastTransitionProps {
